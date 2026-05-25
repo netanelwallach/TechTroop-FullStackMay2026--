@@ -1,0 +1,15 @@
+.space-bottom {
+  margin-bottom: 20px;
+}
+.div-box {
+  display: inline-block;
+  border: 1px solid transparent;
+  background-color: wheat;
+}
+
+.div-box a {
+  display: block;
+  padding: 10px;
+  color: blue;
+  text-decoration: none;
+}

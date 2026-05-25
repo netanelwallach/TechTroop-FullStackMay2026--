@@ -1,0 +1,25 @@
+.box {
+  display: inline-block;
+  padding: 30px;
+  border: 1px solid black;
+}
+#container {
+  display: inline-block;
+  background-color: lightgray;
+  box-shadow: 5px 5px 15px 5px #383838;
+}
+#first {
+  background-color: greenyellow;
+}
+#second {
+  background-color: orange;
+}
+
+input {
+  border: none;
+}
+
+button {
+  background-color: lightgreen;
+  border: green 3px solid;
+}

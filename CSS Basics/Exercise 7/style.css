@@ -1,0 +1,22 @@
+.fullscreen-img {
+  width: 100vw;
+  height: 100vh;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+div {
+  position: relative;
+  width: 40%;
+  z-index: 1;
+  background-color: purple;
+  margin: 0px;
+  padding: 20px;
+  font-size: 30px;
+  font-weight: 200;
+}
+
+.transparent-title {
+  opacity: 0.35;
+}

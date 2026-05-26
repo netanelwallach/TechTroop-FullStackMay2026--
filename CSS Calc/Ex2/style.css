@@ -1,0 +1,12 @@
+div {
+  width: 40%;
+  height: 75px;
+  background: pink;
+  display: flex;
+}
+
+span {
+  border: 3px solid black;
+  width: calc(100% / 3);
+  height: 75px;
+}

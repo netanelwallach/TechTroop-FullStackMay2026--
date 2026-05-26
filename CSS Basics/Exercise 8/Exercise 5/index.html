@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise 5</title>
+</head>
+<body>
+    <h1>Contact Us</h1>
+    <form action="#" method="POST">
+        
+        <fieldset>
+            <legend>Personal Information</legend>
+            <p>
+                Name: <input type="text" name="name" placeholder="Your name">
+            </p>
+            <p>
+                Email: <input type="email" name="email" placeholder="your@email.com">
+            </p>
+            <p>
+                Phone: <input type="tel" name="phone" placeholder="(555) 123-4567">
+            </p>
+        </fieldset>
+
+        <fieldset>
+            <legend>Message Details</legend>
+            <p>
+                Subject: 
+                <select name="subject">
+                    <option>Select subject</option>
+                    <option value="support">Technical Support</option>
+                    <option value="sales">Sales Enquiry</option>
+                </select>
+            </p>
+            
+            <p>
+                Priority:<br>
+                <input type="radio" id="low" name="priority" value="low">
+                <label for="low">Low</label>
+                
+                <input type="radio" id="medium" name="priority" value="medium">
+                <label for="medium">Medium</label>
+                
+                <input type="radio" id="high" name="priority" value="high">
+                <label for="high">High</label>
+            </p>
+
+            <p>
+                Message:<br>
+                <textarea name="message" cols="60" rows="6" placeholder="Your message..."></textarea>
+            </p>
+        </fieldset>
+
+        <fieldset>
+            <legend>Preferences</legend>
+            <p>
+                <input type="checkbox" id="subscribe" name="subscribe">
+                <label for="subscribe">Subscribe to newsletter</label>
+            </p>
+            <p>
+                Contact Method: 
+                <select name="contact_method">
+                    <option value="email">Email</option>
+                    <option value="phone">Phone</option>
+                </select>
+            </p>
+        </fieldset>
+
+        <p>
+            <button type="submit">Send Message</button>
+            <button type="reset">Reset</button>
+        </p>
+
+    </form>
+    
+</body>
+</html>

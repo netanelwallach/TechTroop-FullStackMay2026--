@@ -1,12 +1,13 @@
 #container {
+  width: 50%;
   position: relative;
-  max-width: 100px;
-}
-
-img {
   margin: auto;
 }
 
+img {
+  width: 100%;
+  display: block;
+}
 #top-left {
   position: absolute;
   top: 0;

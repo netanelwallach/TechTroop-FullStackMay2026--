@@ -1,0 +1,32 @@
+.flex-container {
+  display: flex;
+  width: 500px;
+  height: 500px;
+  justify-content: space-between;
+  border: 6px solid #f08080;
+  gap: 20px;
+}
+.container-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.flex-item-wrap {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  border-right: 6px solid #f08080;
+  padding: 0 10px;
+}
+
+.flex-item-wrap > .flex-item {
+  width: 80px;
+  height: 10px;
+  background-color: #f08080;
+  margin: 5px;
+}
+
+.flex-item-wrap > .flex-item:last-child {
+  width: 50%;
+}

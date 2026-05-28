@@ -1,0 +1,23 @@
+.flex-container {
+  display: flex; /* Makes this a true flex container! */
+  width: 600px;
+  height: 600px;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #e0dfe0;
+}
+.flex-item {
+  padding: 20px 2px;
+  flex: 1 1 0%;
+}
+
+.blue-ball {
+  background-color: #6495ed;
+  width: 25%;
+  aspect-ratio: 1 / 1;
+  border-radius: 100%;
+}
+
+.text-box {
+  align-self: center;
+}

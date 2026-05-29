@@ -1,0 +1,97 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.row {
+  display: flex;
+  justify-content: center;
+  flex-grow: 1;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  font-family:
+    system-ui,
+    -apple-system,
+    "Segoe UI",
+    Roboto,
+    Helvetica,
+    Arial,
+    sans-serif;
+}
+
+header {
+  background: linear-gradient(to right, #513ea4, #845ec2);
+  color: #ffffff;
+  padding: 20px;
+}
+
+nav {
+  background-color: #f8f9fa;
+}
+
+ul {
+  list-style-type: none;
+  padding: 10px 20px 0 20px;
+}
+
+li {
+  margin-bottom: 25px;
+}
+
+.nav-top {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+section {
+  padding: 20px;
+  flex-grow: 1;
+}
+
+#section-top {
+  color: #343a40;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+#section-bottom {
+  background-color: #f8f9fa;
+  border: 10px solid #fdfdfe;
+  border-radius: 5%;
+  margin: 3%;
+}
+
+#section-bottom-top {
+  font-size: 24px;
+  font-weight: bold;
+  padding-bottom: 20px;
+}
+
+sidebar {
+  background-color: #f8f9fa;
+  padding: 20px;
+}
+#side-bar {
+  font-size: 18px;
+  font-weight: bold;
+  padding-bottom: 3%;
+}
+
+sidebar > div {
+  padding: 15px;
+}
+
+footer {
+  flex-grow: 1;
+  background-color: #343a40;
+  color: #ffffff;
+}
+
+footer > div > .column {
+  padding: 0 5%;
+  color: #868e94;
+}

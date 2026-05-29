@@ -1,0 +1,43 @@
+body {
+  border: 7px solid #f08080;
+}
+
+.flex-container {
+  display: flex;
+  gap: 20px;
+  padding: 20px;
+}
+
+#container1 {
+  flex-direction: column;
+  border-bottom: 7px solid #f08080;
+}
+
+.flex-ball {
+  background-color: #f08080;
+  width: 15%;
+  aspect-ratio: 1 / 1;
+  border-radius: 100%;
+  align-self: center;
+  margin-top: 50px;
+}
+
+.flex-p {
+  padding-bottom: 50px;
+}
+
+.flex-item {
+  width: 40px;
+  height: 10px;
+  background-color: #f08080;
+}
+
+#container2 {
+  flex-direction: row;
+  padding: 25px;
+  align-items: center;
+}
+
+#item1 {
+  margin-right: auto;
+}

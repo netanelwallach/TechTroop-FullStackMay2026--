@@ -31,6 +31,7 @@ header {
 
 nav {
   background-color: #f8f9fa;
+  height: 100%;
 }
 
 ul {
@@ -72,6 +73,7 @@ section {
 }
 
 sidebar {
+  height: 100%;
   background-color: #f8f9fa;
   padding: 20px;
 }
@@ -94,4 +96,12 @@ footer {
 footer > div > .column {
   padding: 0 5%;
   color: #868e94;
+}
+
+footer > div {
+  padding: 2%;
+}
+
+footer > .row:last-child {
+  height: 100vh;
 }

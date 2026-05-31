@@ -47,6 +47,7 @@ nav > ul > li > ul {
   list-style: none;
   border: 1px solid #ffffff;
   border-radius: 10px;
+  padding-left: 0;
 }
 
 nav > ul > li > ul > li {
@@ -56,6 +57,7 @@ nav > ul > li > ul > li {
 }
 nav > ul > li > ul > li > a {
   color: #000000;
+  text-decoration: none;
 }
 
 section {

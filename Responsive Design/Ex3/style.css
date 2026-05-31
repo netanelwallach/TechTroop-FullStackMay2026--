@@ -1,0 +1,62 @@
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.col {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 10px;
+}
+
+@media (min-width: 600px) {
+  .col {
+    width: 50%;
+  }
+}
+
+@media (min-width: 900px) {
+  .col {
+    width: 33%;
+  }
+}
+
+.content {
+  position: relative;
+  height: 250px;
+  display: flex;
+}
+
+.content > a {
+  display: block;
+  height: 100%;
+  width: 100%;
+}
+
+.content > a > img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+  display: block;
+}
+
+.image-text {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  background-color: #000000aa;
+  color: #ffffff;
+}
+
+@media (min-width: 600px) {
+  .image-text {
+    font-size: 14px;
+  }
+}
+
+@media (min-width: 900px) {
+  .image-text {
+    font-size: 18px;
+  }
+}

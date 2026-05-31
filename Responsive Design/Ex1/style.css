@@ -1,0 +1,12 @@
+.box {
+  height: 150px;
+  width: 100%;
+  background-color: #ff0000;
+}
+
+@media (min-width: 768px) {
+  .box {
+    width: 300px;
+    background-color: #0000ff;
+  }
+}

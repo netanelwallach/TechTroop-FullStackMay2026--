@@ -38,30 +38,37 @@ let startPosition;
 let newPosition = (startPosition || 0) + 10;
 
 console.log(newPosition); //prints 10
-//Don't
+// //Don't
+// function isItMorning(time) {
+//   if (time > 6) {
+//     if (time < 12) {
+//       return true;
+//     }
+//   }
+//   return false;
+// }
+// // Don't
+// function isItMorning(time){
+//     if(time < 6){
+//         continue
+//     }else{
+//         if(time <12){
+//             return true
+//             }
+//     }
+//     return false
+// }
+// Do!!
 function isItMorning(time) {
-  if (time > 6) {
-    if (time < 12) {
-      return true;
-    }
+  if (time > 6 && time < 12) {
+    return true;
   }
   return false;
 }
-// Don't 
-function isItMorning(time){
-    if(time < 6){
-        continue
-    }else{
-        if(time <12){
-            return true
-            }
-    }
-    return false
-}
-// Do!!
-function isItMorning(time){
-    if(time > 6 && time < 12){
-            return true
-    }
-    return false
-}
+let companies = ["Tesla", "Amazon", "Google", "Microsoft"];
+const firstCompany = companies[0];
+console.log(firstCompany); // prints "Tesla"
+companies.push("Blizzard Entertainment");
+// employees.push(...candidates);
+// employees.push(candidates[0], candidates[1], candidates[2]);
+companies.splice(1, 1);

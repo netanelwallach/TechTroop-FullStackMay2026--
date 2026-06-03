@@ -13,7 +13,7 @@ const coffeeShop = {
     let str = "";
     const keys = Object.keys(this.drinkRequirements);
     if (!keys.some((k) => k === drinkType)) {
-      str = "Sorry, we don't make " + drinkType;
+      console.log("Sorry, we don't make " + drinkType);
     } else if (this.beans) {
       if (
         drinkType === "latte" ||
@@ -23,12 +23,11 @@ const coffeeShop = {
       ) {
         this.beans > this.drinkRequirements[drinkType]
           ? (this.beans -= this.drinkRequirements[drinkType])
-          : (str = "Sorry, we're all out of beans!");
+          : console.log("Sorry, we're all out of beans!");
       }
     } else {
-      str = "Sorry, we're all out of beans!";
+      console.log("Sorry, we're all out of beans!");
     }
-    console.log(str);
   },
 };
 

@@ -22,3 +22,13 @@ const occurrencesReduced = words.reduce((counts, word) => {
 }, {});
 
 console.log(occurrencesReduced);
+
+function add(num) {
+  function innerAdd(innerNum) {
+    return num + innerNum;
+  }
+  return innerAdd;
+}
+
+console.log(add(5)(2));
+console.log(add(19)(2));

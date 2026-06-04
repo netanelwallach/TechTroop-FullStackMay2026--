@@ -17,4 +17,4 @@ for (let sides of relevantSides) {
   console.log(getHype(sides));
 }
 
-// Complexity - O(n)
+// Complexity - O(n) for relevantSides, O(1) for getHype

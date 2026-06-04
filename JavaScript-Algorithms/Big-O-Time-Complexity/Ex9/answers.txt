@@ -1,0 +1,4 @@
+Green - flat line
+Blue = O(n)
+Yellow - O(log(n))
+Red - O(n^2)

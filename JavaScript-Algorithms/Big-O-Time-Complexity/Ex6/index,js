@@ -1,0 +1,24 @@
+const findDuplicates = function (ages) {
+  for (let i = 0; i < ages.length; i++) {
+    for (let j = i + 1; j < ages.length; j++) {
+      if (ages[i] === ages[j]) {
+        console.log(`${ages[i]} has a duplicate`);
+      }
+    }
+    //note that this *entire* inner loop runs for each iteration of i
+  }
+};
+
+const findDuplicatesUpdate = function (ages) {
+  const occurances = ages.reduce((counts, item) => {
+    counts[item] = (counts[item] || 0) + 1;
+    return counts;
+  }, {});
+
+  for (const key in occurances) {
+    const element = occurances[key];
+    if (element > 1) {
+      console.log(`${element} has a duplicate`);
+    }
+  }
+};

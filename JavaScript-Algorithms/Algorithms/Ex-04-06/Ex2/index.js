@@ -41,3 +41,5 @@ arr = [5, 1, 5, 2, 1, 5];
 console.log(mostFrequent(arr));
 arr = [4, 4, 2, 2, 1];
 console.log(mostFrequent(arr));
+arr = [1, 2, 2, 2, 1, 1];
+console.log(mostFrequent(arr));

@@ -3,7 +3,7 @@ let year = 2024;
 // Examples: 2024 = leap, 1900 = not leap, 2000 = leap, 2023 = not leap
 
 let leap = false;
-str = "";
+let str = "";
 if (year % 4 != 0) {
   //leap = false
 } else if (year % 4 == 0 && year % 100 != 0) {

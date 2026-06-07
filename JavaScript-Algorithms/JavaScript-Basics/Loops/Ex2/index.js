@@ -10,9 +10,12 @@ for (let index = 0; index < names.length; index++) {
 }
 
 let str = "";
-for (const person in people) {
-  const element = people[person];
-  str += element.name + " is " + element.age + " years old, ";
+// for (const person in people) {
+//   const element = people[person];
+//   str += element.name + " is " + element.age + " years old, ";
+// }
+for (const person of people) {
+  str += person.name + " is " + person.age + " years old, ";
 }
 
 str = str.slice(0, -2) + ".";

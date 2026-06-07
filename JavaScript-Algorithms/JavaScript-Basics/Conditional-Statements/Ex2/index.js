@@ -8,7 +8,7 @@ if (score < 60) {
   console.log("C");
 } else if (score < 90) {
   console.log("B");
-} else if (score < 100) {
+} else if (score <= 100) {
   console.log("A");
 } else {
   console.log("Your score is not int 0-100 range");

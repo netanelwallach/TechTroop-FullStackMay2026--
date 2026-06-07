@@ -64,15 +64,23 @@ const getCatchphrase = function (str) {
 };
 
 const getSummary = function (person) {
-  let summary = "";
-  summary += capitalize(person.name);
-  summary += ` is ${getAge(person.age)} `; //Yes - you can put a function call inside the tick quotes!
-  summary += getProfession(person.profession);
-  summary += `from ${getCityCountry(person.city, person.country)}. `;
-  summary +=
-    capitalize(person.name) +
-    ` loves to say "${getCatchphrase(person.catchphrase)}".`;
-  return summary;
+  // let summary = "";
+  // summary += capitalize(person.name);
+  // summary += ` is ${getAge(person.age)} `; //Yes - you can put a function call inside the tick quotes!
+  // summary += getProfession(person.profession);
+  // summary += `from ${getCityCountry(person.city, person.country)}. `;
+  // summary +=
+  //   capitalize(person.name) +
+  //   ` loves to say "${getCatchphrase(person.catchphrase)}".`;
+  // return summary;
+  const name = capitalize(person.name);
+  const age = getAge(person.age);
+  const profession = getProfession(person.profession).trim();
+  const location = getCityCountry(person.city, person.country);
+  const catchphrase = getCatchphrase(person.catchphrase);
+
+  // הכל במחרוזת אחת נקייה ועקבית:
+  return `${name} is ${age} ${profession} from ${location}. ${name} loves to say "${catchphrase}".`;
 };
 
 people_info.forEach((element) => {

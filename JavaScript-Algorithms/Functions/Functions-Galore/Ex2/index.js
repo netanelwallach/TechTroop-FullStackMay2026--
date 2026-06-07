@@ -16,7 +16,7 @@ const removeSpecialChars = function (str, toRemove) {
   return result;
 };
 
-const countWords = function (sentence) {
+const countWords = function (story, specialChars, wordCounts) {
   let storyLowerCase = cleanText(story);
   let cleanStory = removeSpecialChars(storyLowerCase, specialChars);
 
@@ -33,7 +33,7 @@ const countWords = function (sentence) {
   return wordCounts;
 };
 
-console.log(countWords(story));
+console.log(countWords(story, specialChars, wordCounts));
 
 // const storyLowerCase = story.toLowerCase();
 // let cleanStory = storyLowerCase;

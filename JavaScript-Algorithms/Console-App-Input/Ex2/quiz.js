@@ -8,7 +8,7 @@ const quizData = [
   { question: "What is the largest ocean on Earth?", answer: "Pacific" },
 ];
 
-for (const i = 0; i < quizData.length; i++) {
+for (let i = 0; i < quizData.length; i++) {
   console.log(`Question ${i + 1}: ${quizData[i].question}`);
   const userAnswer = prompt("> ");
 

@@ -1,4 +1,4 @@
-const { isEven, removeAtLeastOne, implify, validate } = require(".");
+const { isEven, removeAtLeastOne, implify, validate, add } = require(".");
 
 test("isEven should return true for 58", () => {
   expect(isEven(58)).toBeTruthy();
@@ -42,4 +42,15 @@ test("throws when input is not a string", () => {
 
 test("throws when input is not an array", () => {
   expect(() => validate(25)).toThrow();
+});
+
+// Extension
+test("add() uses push", () => {
+  const spy = jest.spyOn(Array.prototype, "push");
+
+  add(1, 2);
+
+  expect(spy).toHaveBeenCalled();
+
+  spy.mockRestore();
 });

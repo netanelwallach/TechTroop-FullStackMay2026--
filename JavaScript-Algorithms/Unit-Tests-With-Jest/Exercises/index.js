@@ -43,9 +43,15 @@ const validate = function (arr) {
   }
 };
 
+const add = function (x, y) {
+  let stuff = [];
+  stuff.push(x, y);
+};
+
 module.exports = {
   isEven,
   removeAtLeastOne,
   implify,
   validate,
+  add,
 };

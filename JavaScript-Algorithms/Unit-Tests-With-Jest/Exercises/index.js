@@ -19,8 +19,33 @@ const implify = function (str) {
     .join("");
 };
 
+const validate = function (arr) {
+  let flag = false;
+  let falseCount = 0;
+  let trueCount = 0;
+  for (const element of arr) {
+    if (typeof element === "boolean") {
+      flag = true;
+      if (element === true) {
+        trueCount++;
+      } else {
+        falseCount++;
+      }
+    }
+  }
+
+  if (flag) {
+    return trueCount > falseCount ? true : false;
+  } else {
+    return {
+      error: "Need at least one boolean",
+    };
+  }
+};
+
 module.exports = {
   isEven,
   removeAtLeastOne,
   implify,
+  validate,
 };

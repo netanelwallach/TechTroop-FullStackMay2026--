@@ -1,4 +1,4 @@
-const { isEven, removeAtLeastOne, implify } = require(".");
+const { isEven, removeAtLeastOne, implify, validate } = require(".");
 
 test("isEven should return true for 58", () => {
   expect(isEven(58)).toBeTruthy();
@@ -20,4 +20,9 @@ test("implify should return a clean string without these symbols: ! # . , ' ", (
   expect(str2).not.toContain(".");
   expect(str2).not.toContain(",");
   expect(str2).not.toContain("'");
+});
+
+test("validate should verify that there is at least one boolean in the array", () => {
+  let arr = [1, 2, 3, false, 5, 6];
+  expect(validate(arr)).toBeFalsy();
 });

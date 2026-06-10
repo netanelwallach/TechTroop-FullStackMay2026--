@@ -26,3 +26,20 @@ test("validate should verify that there is at least one boolean in the array", (
   let arr = [1, 2, 3, false, 5, 6];
   expect(validate(arr)).toBeFalsy();
 });
+
+// Ex5
+test("should return false for positive odd numbers", () => {
+  expect(isEven(1)).toBe(false);
+});
+
+test("should throw when input is a string", () => {
+  expect(() => removeAtLeastOne("abc")).toThrow();
+});
+
+test("throws when input is not a string", () => {
+  expect(() => implify(null)).toThrow();
+});
+
+test("throws when input is not an array", () => {
+  expect(() => validate(25)).toThrow();
+});

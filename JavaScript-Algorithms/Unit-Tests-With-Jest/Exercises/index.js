@@ -10,7 +10,17 @@ const removeAtLeastOne = function (arr) {
   return arr;
 };
 
+//should return a clean string without these symbols: "!", "#", ".", ",", "'"
+const implify = function (str) {
+  let symbols = ["!", "#", ".", ",", "'"];
+  return str
+    .split("")
+    .filter((c) => symbols.indexOf(c) == -1)
+    .join("");
+};
+
 module.exports = {
   isEven,
   removeAtLeastOne,
+  implify,
 };

@@ -1,13 +1,23 @@
-const { isEven, removeAtLeastOne } = require(".");
+const { isEven, removeAtLeastOne, implify } = require(".");
 
 test("isEven should return true for 58", () => {
   expect(isEven(58)).toBeTruthy();
 });
 
-test("removeAtLeastOne should return an array that is smaller at least in one from the origianl array", () => {
+test("removeAtLeastOne should remove at least one element from the array `arr`", () => {
   let arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
   const size = arr.length;
   let arr2 = removeAtLeastOne(arr);
   const size2 = arr2.length;
   expect(size2).toBeLessThan(size);
+});
+
+test("implify should return a clean string without these symbols: ! # . , ' ", () => {
+  let str = "a!b#c.d,e'f";
+  let str2 = implify(str);
+  expect(str2).not.toContain("!");
+  expect(str2).not.toContain("#");
+  expect(str2).not.toContain(".");
+  expect(str2).not.toContain(",");
+  expect(str2).not.toContain("'");
 });

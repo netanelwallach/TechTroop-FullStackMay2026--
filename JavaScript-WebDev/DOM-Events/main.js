@@ -13,7 +13,7 @@ box.onclick = function () {
 
 const secondBox = document.createElement("div"); // dynamically creating an element
 
-secondBox.setAttribute("class", "box");
+secondBox.setAttribute("class", "second-box");
 secondBox.onclick = function () {
   // adding an event to the new element
   secondBox.innerHTML = "I'm alive!";

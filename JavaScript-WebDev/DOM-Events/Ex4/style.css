@@ -1,0 +1,90 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  /* הגדרת הפונט החדש לכל האלמנטים */
+  font-family: "Marcellus", Georgia, serif;
+}
+
+body {
+  background-color: #f0f2f5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.form-container {
+  background-color: #1abc9c;
+  width: 460px;
+  padding: 35px;
+  border: 3px solid #16a085;
+  border-radius: 4px;
+}
+
+.form-group {
+  margin-bottom: 22px;
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  color: #000000;
+  font-size: 20px; /* הגדלה קלה להתאמה למקור */
+  font-weight: bold;
+  margin-bottom: 6px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 10px 12px;
+  font-size: 22px;
+  border: none;
+  background-color: #ffffff;
+  /* פינות כמעט חדות לחלוטין כמו במקור */
+  border-radius: 1px;
+
+  /* הצללה פנימית חזקה וחדה יותר המדמה את עומק השדה במקור */
+  box-shadow:
+    inset 2px 3px 4px rgba(0, 0, 0, 0.35),
+    inset -1px -1px 2px rgba(0, 0, 0, 0.1);
+
+  color: #12233c;
+  outline: none;
+}
+
+.form-row {
+  display: flex;
+  gap: 25px;
+}
+
+.form-row .form-group {
+  flex: 1;
+}
+
+.button-container {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 15px;
+}
+
+#submit-btn {
+  background-color: #149178;
+  color: #000000;
+  border: none;
+  padding: 10px 28px;
+  font-size: 19px;
+  cursor: pointer;
+  /* פינות מעוגלות מעט יותר בשביל הכפתור */
+  border-radius: 6px;
+
+  /* צל חזק ורך שנופל ימינה ולמטה */
+  box-shadow: 3px 4px 6px rgba(0, 0, 0, 0.4);
+  transition: background-color 0.2s;
+}
+
+.submit-btn:hover {
+  background-color: #117a65;
+}

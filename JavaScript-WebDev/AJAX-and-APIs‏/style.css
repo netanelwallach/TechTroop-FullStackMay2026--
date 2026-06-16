@@ -1,0 +1,97 @@
+/* עיצוב כללי של הדף - מרכזי ונקי */
+body {
+  font-family:
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    Oxygen,
+    Ubuntu,
+    Cantarell,
+    sans-serif;
+  background-color: #f4f7f6;
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  margin: 0;
+  padding: 20px;
+}
+
+/* כותרת ראשית */
+h1 {
+  color: #2c3e50;
+  margin-bottom: 10px;
+}
+
+/* עיצוב הכפתור */
+button {
+  background-color: #3498db;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 8px;
+  cursor: pointer;
+  transition:
+    background-color 0.2s ease,
+    transform 0.1s ease;
+  margin-bottom: 30px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* אפקט ריחוף ולחיצה על הכפתור */
+button:hover {
+  background-color: #2980b9;
+}
+
+button:active {
+  transform: scale(0.98);
+}
+
+/* עיצוב אזור הבדיחה */
+#setup,
+#punchline {
+  max-width: 400px;
+  text-align: center;
+  font-size: 1.2rem;
+  line-height: 1.5;
+}
+
+/* חלק ה"שאלה" של הבדיחה - מודגש יותר */
+#setup {
+  font-weight: bold;
+  color: #2c3e50;
+  margin-bottom: 15px;
+}
+
+/* חלק ה"פאנץ'" של הבדיחה - מופיע בצבע קצת שונה ורך יותר */
+#punchline {
+  color: #27ae60;
+  font-style: italic;
+}
+
+#loader {
+  font-size: 1.1rem;
+  color: #7f8c8d;
+  font-style: italic;
+  margin-bottom: 15px;
+  animation: blink 1.4s infinite both;
+}
+
+/* קוד האנימציה להבהוב */
+@keyframes blink {
+  0% {
+    opacity: 0.2;
+  }
+  20% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.2;
+  }
+}

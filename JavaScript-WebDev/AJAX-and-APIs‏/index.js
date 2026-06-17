@@ -28,7 +28,7 @@ import $ from "jquery";
 // let data = $.get("/some_api");
 
 // $.get(
-//   "https://www.googleapis.com/books/v1/volumes?q=isbn:0439023521&key=AIzaSyAOOiX3uKqRFY46zMih2dvAW2PO_T24qvQ",
+//   "https://www.googleapis.com/books/v1/volumes?q=isbn:0439023521",
 //   function (result) {
 //     console.log(result);
 //   },

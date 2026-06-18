@@ -44,7 +44,8 @@ function getUsersInfo(users, posts, comments) {
   const usersInfo = users.map((user) => {
     const userPosts = posts.filter((post) => post.userId === user.id);
     const userComments = comments.filter(
-      (comment) => comment.postId === userPosts.id,
+      //   (comment) => comment.postId === userPosts.id,
+      (comment) => userPosts.some((post) => post.id === comment.postId),
     );
     return {
       userName: user.name,

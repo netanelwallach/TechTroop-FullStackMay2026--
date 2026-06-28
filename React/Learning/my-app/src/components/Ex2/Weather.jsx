@@ -25,6 +25,8 @@ function WeatherComp() {
       <h4 className="ex-title">Exercise 2</h4>
       <div className="exercise" id="ex-2">
         <div id="weatherBox" className={getClassName(14)}></div>
+        <div id="weatherBox" className={getClassName(25)}></div>
+        <div id="weatherBox" className={getClassName(32)}></div>
       </div>
     </div>
   );

@@ -1,7 +1,7 @@
-const Item = ({ item, price }) => {
+const Item = ({ item, price, discount }) => {
   return (
     <div>
-      {item}: {price}$
+      {item}: {price * (1 - discount)}$
     </div>
   );
 };

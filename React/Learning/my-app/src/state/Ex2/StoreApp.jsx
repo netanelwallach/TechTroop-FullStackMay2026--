@@ -32,13 +32,26 @@ const StoreApp = () => {
     }
   };
 
+  const [shouldDiscount, setShouldDiscount] = useState(store.shouldDiscount);
+  let giveDiscount = shouldDiscount;
+  const switchDiscount = () => {
+    setShouldDiscount(!giveDiscount);
+  };
+
   return (
     <>
-      <button onClick={switchPage}>
-        {currentPage === "Home" ? "Landing" : "Home"}
-      </button>
+      <span>
+        <button onClick={switchPage}>
+          {currentPage === "Home" ? "Landing" : "Home"}
+        </button>
+      </span>
+      <span>
+        <button onClick={switchDiscount}>
+          {shouldDiscount === true ? "Cancel Discount" : "Give Discount"}
+        </button>
+      </span>
       {currentPage === "Home" ? (
-        <Home store={items} />
+        <Home store={items} giveDiscount={giveDiscount} />
       ) : (
         <Landing user={user} items={items} />
       )}

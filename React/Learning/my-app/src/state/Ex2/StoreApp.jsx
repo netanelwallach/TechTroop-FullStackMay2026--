@@ -22,10 +22,26 @@ const StoreApp = () => {
   const user = store.user;
   const items = [...store.store];
 
+  const [currentPage, setCurrentPage] = useState(store.currentPage);
+  const switchPage = () => {
+    let page = currentPage;
+    if (page === "Home") {
+      setCurrentPage("Landing");
+    } else {
+      setCurrentPage("Home");
+    }
+  };
+
   return (
     <>
-      <Landing user={user} items={items} />
-      <Home store={items} />
+      <button onClick={switchPage}>
+        {currentPage === "Home" ? "Landing" : "Home"}
+      </button>
+      {currentPage === "Home" ? (
+        <Home store={items} />
+      ) : (
+        <Landing user={user} items={items} />
+      )}
     </>
   );
 };

@@ -2,7 +2,8 @@ import CompanyInfo from "./components/Ex1/CompanyInfo";
 import WeatherComp from "./components/Ex2/Weather";
 import Hudini from "./state/Ex1/Hudini";
 import StoreApp from "./state/Ex2/StoreApp";
-import Exercise1 from "./input/Ex1/Exercise1";
+import Exercise1 from "./input/Exercise1";
+import Exercise2 from "./input/Exercise2";
 
 function App() {
   return (
@@ -11,8 +12,9 @@ function App() {
         /* <CompanyInfo />
       <WeatherComp />
       <Hudini />
-      <StoreApp /> */
-        <Exercise1 />
+      <StoreApp /> 
+        <Exercise1 /> */
+        <Exercise2 />
       }
     </>
   );

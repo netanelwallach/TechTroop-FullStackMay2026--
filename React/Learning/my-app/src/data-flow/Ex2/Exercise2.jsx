@@ -5,7 +5,7 @@ import List from "./List";
 
 function Exercise2() {
   const [conversation, setConversation] = useState({
-    displayConversation: "Laura",
+    displayConversation: null,
     conversations: [
       {
         with: "Laura",
@@ -56,6 +56,7 @@ function Exercise2() {
             )?.convo
           }
           sender={conversation.displayConversation}
+          goBack={() => displayConvo(null)}
         />
       )}
     </>

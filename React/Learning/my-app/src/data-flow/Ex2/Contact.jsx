@@ -1,7 +1,7 @@
 function Contact({ name, onDisplayConvo }) {
   return (
     <>
-      <div>{name}</div>
+      <div onClick={() => onDisplayConvo(name)}>{name}</div>
     </>
   );
 }

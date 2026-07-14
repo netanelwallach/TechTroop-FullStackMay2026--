@@ -1,6 +1,6 @@
 import { useState } from "react";
 import styles from "./Exercise2.module.css";
-import Conversation from "./Conversation";
+import Conversation from "./Contact";
 import List from "./List";
 
 function Exercise2() {

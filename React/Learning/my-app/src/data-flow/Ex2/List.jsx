@@ -1,8 +1,10 @@
+import Contact from "./Contact";
+
 function List({ contacts }) {
   return (
     <>
       {contacts.map((contact, index) => (
-        <div key={index}>{contact}</div>
+        <Contact key={index} name={contact} />
       ))}
     </>
   );

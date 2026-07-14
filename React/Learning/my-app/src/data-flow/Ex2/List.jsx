@@ -1,10 +1,10 @@
 import Contact from "./Contact";
 
-function List({ contacts }) {
+function List({ contacts, onDisplayConvo }) {
   return (
     <>
       {contacts.map((contact, index) => (
-        <Contact key={index} name={contact} />
+        <Contact key={index} name={contact} onDisplayConvo={onDisplayConvo} />
       ))}
     </>
   );

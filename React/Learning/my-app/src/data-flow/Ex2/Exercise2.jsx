@@ -47,7 +47,7 @@ function Exercise2() {
   return (
     <>
       {conversation.displayConversation === null ? (
-        <List contacts={convContacts} />
+        <List contacts={convContacts} onDisplayConvo={displayConvo} />
       ) : (
         <Conversation />
       )}

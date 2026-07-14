@@ -1,11 +1,11 @@
 import { useState } from "react";
 import styles from "./Exercise2.module.css";
-import Conversation from "./Contact";
+import Conversation from "./Conversation";
 import List from "./List";
 
 function Exercise2() {
   const [conversation, setConversation] = useState({
-    displayConversation: null,
+    displayConversation: "Laura",
     conversations: [
       {
         with: "Laura",
@@ -40,7 +40,7 @@ function Exercise2() {
   const convContacts = conversation.conversations.map((c) => c.with);
 
   const displayConvo = (name) => {
-    const currentConversation = { ...conversations };
+    const currentConversation = { ...conversation };
     currentConversation.displayConversation = name;
     setConversation(currentConversation);
   };
@@ -49,7 +49,14 @@ function Exercise2() {
       {conversation.displayConversation === null ? (
         <List contacts={convContacts} onDisplayConvo={displayConvo} />
       ) : (
-        <Conversation />
+        <Conversation
+          convo={
+            conversation.conversations.find(
+              (c) => c.with === conversation.displayConversation,
+            )?.convo
+          }
+          sender={conversation.displayConversation}
+        />
       )}
     </>
   );

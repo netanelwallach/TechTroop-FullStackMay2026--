@@ -1,10 +1,9 @@
-function List({ names }) {
+function List({ contacts }) {
   return (
     <>
-      {/* {names.map((name) => (
-        <div>name</div>
-      ))} */}
-      <div>List</div>
+      {contacts.map((contact, index) => (
+        <div key={index}>{contact}</div>
+      ))}
     </>
   );
 }

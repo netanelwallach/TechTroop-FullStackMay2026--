@@ -37,9 +37,15 @@ function Exercise2() {
     ],
   });
 
+  const convContacts = conversation.conversations.map((c) => c.with);
+
   return (
     <>
-      {conversation.displayConversation === null ? <List /> : <Conversation />}
+      {conversation.displayConversation === null ? (
+        <List contacts={convContacts} />
+      ) : (
+        <Conversation />
+      )}
     </>
   );
 }

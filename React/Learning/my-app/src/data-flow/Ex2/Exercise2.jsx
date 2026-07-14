@@ -39,6 +39,11 @@ function Exercise2() {
 
   const convContacts = conversation.conversations.map((c) => c.with);
 
+  const displayConvo = (name) => {
+    const currentConversation = { ...conversations };
+    currentConversation.displayConversation = name;
+    setConversation(currentConversation);
+  };
   return (
     <>
       {conversation.displayConversation === null ? (

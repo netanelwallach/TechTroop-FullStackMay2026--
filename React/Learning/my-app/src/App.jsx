@@ -7,6 +7,7 @@ import StoreApp from "./state/Ex2/StoreApp";
 import Exercise1 from "./data-flow/Ex1/Exercise1";
 import Exercise2 from "./data-flow/Ex2/Exercise2";
 import Time from "./useEffect-and-lifecycle/Ex1/Time";
+import Posts from "./useEffect-and-lifecycle/Ex2/Posts";
 
 function App() {
   return (
@@ -17,8 +18,9 @@ function App() {
       <Hudini />
       <StoreApp /> 
         <Exercise1 />
-        <Exercise2 />*/
-        <Time />
+        <Exercise2 />
+        <Time />*/
+        <Posts />
       }
     </>
   );

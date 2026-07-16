@@ -6,6 +6,7 @@ import StoreApp from "./state/Ex2/StoreApp";
 // import Exercise2 from "./input/Exercise2";
 import Exercise1 from "./data-flow/Ex1/Exercise1";
 import Exercise2 from "./data-flow/Ex2/Exercise2";
+import Time from "./useEffect-and-lifecycle/Ex1/Time";
 
 function App() {
   return (
@@ -15,8 +16,9 @@ function App() {
       <WeatherComp />
       <Hudini />
       <StoreApp /> 
-        <Exercise1 />*/
-        <Exercise2 />
+        <Exercise1 />
+        <Exercise2 />*/
+        <Time />
       }
     </>
   );

@@ -5,6 +5,7 @@ import PostCard from "./PostCard";
 function Posts() {
   const [posts, setPosts] = useState([]);
   const [loading, setLoading] = useState(true);
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
 
   useEffect(() => {
     const getData = async function () {
@@ -29,10 +30,30 @@ function Posts() {
     getData();
   }, []);
 
+  useEffect(() => {
+    const handleResize = () => {
+      setWindowWidth(window.innerWidth);
+    };
+
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
+  const isSmallScreen = windowWidth <= 768;
+
   return (
     <>
       <h1 className={styles.title}>Top Posts</h1>
-      <div className={styles["posts-container"]}>
+      <div
+        className={
+          isSmallScreen
+            ? styles["posts-container-vertical"]
+            : styles["posts-container"]
+        }
+      >
         {loading === true ? (
           <div>Loading</div>
         ) : (

@@ -48,3 +48,17 @@
   color: #1a1a1a;
   line-height: 1.5;
 }
+
+.posts-container-vertical {
+  display: flex;
+  flex-direction: column; /* Stacks the cards vertically */
+  align-items: center; /* Centers them horizontally */
+  gap: 24px;
+  padding: 20px;
+  font-family: sans-serif;
+}
+
+.posts-container-vertical .card {
+  width: 90%;
+  max-width: 500px;
+}

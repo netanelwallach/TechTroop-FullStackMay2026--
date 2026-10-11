@@ -4,10 +4,11 @@ import Hudini from "./state/Ex1/Hudini";
 import StoreApp from "./state/Ex2/StoreApp";
 // import Exercise1 from "./input/Exercise1";
 // import Exercise2 from "./input/Exercise2";
-import Exercise1 from "./data-flow/Ex1/Exercise1";
-import Exercise2 from "./data-flow/Ex2/Exercise2";
+//import Exercise1 from "./data-flow/Ex1/Exercise1";
+//import Exercise2 from "./data-flow/Ex2/Exercise2";
 import Time from "./useEffect-and-lifecycle/Ex1/Time";
 import Posts from "./useEffect-and-lifecycle/Ex2/Posts";
+import Exercise1 from "./Simple-State-Management/Ex1/Exercise1";
 
 function App() {
   return (
@@ -19,8 +20,9 @@ function App() {
       <StoreApp /> 
         <Exercise1 />
         <Exercise2 />
-        <Time />*/
-        <Posts />
+        <Time />
+        <Posts />*/
+        <Exercise1 />
       }
     </>
   );

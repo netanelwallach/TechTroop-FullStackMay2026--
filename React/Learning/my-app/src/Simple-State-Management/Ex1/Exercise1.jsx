@@ -1,60 +1,76 @@
-import { useState } from "react";
-import { useReducer } from "react";
+import React, { useReducer } from "react";
+
+const initialCart = {
+  items: [],
+  total: 0,
+  itemCount: 0,
+};
+
+function cartReducer(cart, action) {
+  switch (action.type) {
+    case "ADD_ITEM": {
+      const newItem = { ...action.data, id: Date.now() };
+      return {
+        ...cart,
+        items: [...cart.items, newItem],
+        total: cart.total + newItem.price,
+        itemCount: cart.itemCount + 1,
+      };
+    }
+    case "REMOVE_ITEM": {
+      const itemToRemove = cart.items.find((item) => item.id === action.data);
+
+      // handle removing a non-existent item
+      if (!itemToRemove) {
+        return cart;
+      }
+
+      return {
+        ...cart,
+        items: cart.items.filter((item) => item.id !== action.data),
+        total: cart.total - itemToRemove.price,
+        itemCount: cart.itemCount - 1,
+      };
+    }
+    case "CLEAR_CART": {
+      return initialCart;
+    }
+    default:
+      return cart;
+  }
+}
 
 function ShoppingCart() {
-  // const [items, setItems] = useState([]);
-  // const [total, setTotal] = useState(0);
-  // const [itemCount, setItemCount] = useState(0);
+  const [cart, dispatch] = useReducer(cartReducer, initialCart);
 
-  const initialState = {
-    items: [],
-    total: 0,
-    itemCount: 0,
+  const addItem = (product) => {
+    dispatch({ type: "ADD_ITEM", data: product });
   };
 
-  // const addItem = (product) => {
-  //   const newItems = [...items, { ...product, id: Date.now() }];
-  //   setItems(newItems);
-  //   setTotal(total + product.price);
-  //   setItemCount(itemCount + 1);
-  // };
+  const removeItem = (id) => {
+    dispatch({ type: "REMOVE_ITEM", data: id });
+  };
 
-  // const removeItem = (id) => {
-  //   const newItems = items.filter((item) => item.id !== id);
-  //   const removedItem = items.find((item) => item.id === id);
-  //   setItems(newItems);
-  //   setTotal(total - removedItem.price);
-  //   setItemCount(itemCount - 1);
-  // };
+  const clearCart = () => {
+    dispatch({ type: "CLEAR_CART" });
+  };
 
   return (
     <div>
       <h2>
-        Shopping Cart ({itemCount} items) - Total: ${total}
+        Shopping Cart ({cart.itemCount} items) - Total: ${cart.total}
       </h2>
-      {/* Render items */}
+      <ul>
+        {cart.items.map((item) => (
+          <li key={item.id}>
+            {item.name} - ${item.price}
+            <button onClick={() => removeItem(item.id)}>Remove</button>
+          </li>
+        ))}
+      </ul>
+      {cart.items.length > 0 && <button onClick={clearCart}>Clear Cart</button>}
     </div>
   );
-}
-
-function cartReducer(items, action) {
-  switch (action.type) {
-    case "ADD": {
-      const newItem = action.data;
-      const updatedItems = [...items, newItem];
-      return {updatedItems, total + newItem.price, itemCount + 1};
-      break;
-    }
-    case "REMOVE": {
-      const id = action.data;
-      const targetItem = items.find(item => item.id === itemId);
-      const updatedItems = items.filter((item) => item.id !== id);
-      return {updatedItems, total - targetItem.price, itemCount - 1};
-      break;
-    }
-    default:
-      return items; // Also throwing an error is an option
-  }
 }
 
 export default ShoppingCart;

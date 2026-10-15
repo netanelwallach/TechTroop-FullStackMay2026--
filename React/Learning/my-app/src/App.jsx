@@ -9,6 +9,7 @@ import StoreApp from "./state/Ex2/StoreApp";
 import Time from "./useEffect-and-lifecycle/Ex1/Time";
 import Posts from "./useEffect-and-lifecycle/Ex2/Posts";
 import ShoppingCart from "./Simple-State-Management/Ex1/Exercise1";
+import App2 from "./Simple-State-Management/Ex2/Exercise2";
 
 function App() {
   return (
@@ -21,8 +22,9 @@ function App() {
         <Exercise1 />
         <Exercise2 />
         <Time />
-        <Posts />*/
-        <ShoppingCart />
+        <Posts />
+        <ShoppingCart />*/
+        <App2 />
       }
     </>
   );

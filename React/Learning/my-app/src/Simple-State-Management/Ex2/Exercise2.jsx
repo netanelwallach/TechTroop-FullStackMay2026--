@@ -1,20 +1,25 @@
 import { useState } from "react";
+import ThemeProvider, { useTheme } from "./ThemeContext";
 
 function App2() {
-  const [theme, setTheme] = useState("light");
-  const [fontSize, setFontSize] = useState("medium");
+  //   const [theme, setTheme] = useState("light");
+  //   const [fontSize, setFontSize] = useState("medium");
 
   return (
-    <Layout
-      theme={theme}
-      setTheme={setTheme}
-      fontSize={fontSize}
-      setFontSize={setFontSize}
-    />
+    <ThemeProvider>
+      <Layout
+      //   theme={theme}
+      //   setTheme={setTheme}
+      //   fontSize={fontSize}
+      //   setFontSize={setFontSize}
+      />
+    </ThemeProvider>
   );
 }
 
-function Layout({ theme, setTheme, fontSize, setFontSize }) {
+function Layout() {
+  const { theme } = useTheme();
+
   const bgColor = theme === "light" ? "#ffffff" : "#1a1a1a";
   const color = theme === "light" ? "#000000" : "#ffffff";
 
@@ -28,31 +33,36 @@ function Layout({ theme, setTheme, fontSize, setFontSize }) {
       }}
     >
       <Header
-        theme={theme}
-        setTheme={setTheme}
-        fontSize={fontSize}
-        setFontSize={setFontSize}
+      // theme={theme}
+      // setTheme={setTheme}
+      // fontSize={fontSize}
+      // setFontSize={setFontSize}
       />
-      <Content theme={theme} fontSize={fontSize} />
+      <Content
+      //   theme={theme} fontSize={fontSize}
+      />
     </div>
   );
 }
 
-function Header({ theme, setTheme, fontSize, setFontSize }) {
+function Header() {
   return (
     <header style={{ marginBottom: "20px" }}>
-      <Navigation theme={theme} fontSize={fontSize} />
+      <Navigation
+      //   theme={theme} fontSize={fontSize}
+      />
       <Controls
-        theme={theme}
-        setTheme={setTheme}
-        fontSize={fontSize}
-        setFontSize={setFontSize}
+      // theme={theme}
+      // setTheme={setTheme}
+      // fontSize={fontSize}
+      // setFontSize={setFontSize}
       />
     </header>
   );
 }
 
-function Navigation({ theme, fontSize }) {
+function Navigation() {
+  const { fontSize } = useTheme();
   const size =
     fontSize === "small" ? "14px" : fontSize === "large" ? "20px" : "16px";
 
@@ -64,16 +74,22 @@ function Navigation({ theme, fontSize }) {
   );
 }
 
-function Controls({ theme, setTheme, fontSize, setFontSize }) {
+function Controls() {
   return (
     <div>
-      <ThemeToggle theme={theme} setTheme={setTheme} />
-      <FontControl fontSize={fontSize} setFontSize={setFontSize} />
+      <ThemeToggle
+      //   theme={theme} setTheme={setTheme}
+      />
+      <FontControl
+      //   fontSize={fontSize} setFontSize={setFontSize}
+      />
     </div>
   );
 }
 
-function ThemeToggle({ theme, setTheme }) {
+function ThemeToggle() {
+  const { theme, setTheme } = useTheme();
+
   return (
     <button onClick={() => setTheme(theme === "light" ? "dark" : "light")}>
       {theme === "light" ? "Dark" : "Light"} Mode
@@ -81,7 +97,8 @@ function ThemeToggle({ theme, setTheme }) {
   );
 }
 
-function FontControl({ fontSize, setFontSize }) {
+function FontControl() {
+  const { fontSize, setFontSize } = useTheme();
   return (
     <select value={fontSize} onChange={(e) => setFontSize(e.target.value)}>
       <option value="small">Small</option>
@@ -91,19 +108,25 @@ function FontControl({ fontSize, setFontSize }) {
   );
 }
 
-function Content({ theme, fontSize }) {
+function Content() {
+  const { fontSize } = useTheme();
   const size =
     fontSize === "small" ? "14px" : fontSize === "large" ? "20px" : "16px";
 
   return (
     <main style={{ fontSize: size }}>
-      <Article theme={theme} />
-      <Sidebar theme={theme} />
+      <Article
+      //   theme={theme}
+      />
+      <Sidebar
+      //    theme={theme}
+      />
     </main>
   );
 }
 
-function Article({ theme }) {
+function Article() {
+  const { theme } = useTheme();
   return (
     <article>
       <h1>Article Title</h1>
@@ -115,7 +138,8 @@ function Article({ theme }) {
   );
 }
 
-function Sidebar({ theme }) {
+function Sidebar() {
+  const { theme } = useTheme();
   return (
     <aside
       style={{ marginTop: "20px", padding: "10px", border: "1px solid #ccc" }}
